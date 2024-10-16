@@ -38,6 +38,10 @@ Run the script to generate user data: `python generateuser.py`
 
 The `generateuser.py` script can be easily modified to generate different types of data or to adjust the output formats. Refer to the [Faker documentation](https://faker.readthedocs.io/en/master/) for more information on available options.
 
+## Extra
+
+If you want also to proceed a bulk deletion of the users by providing a CSV file with the Azure specifications, run the deleteuser.py script following the same process as the generateuser.py
+
 ## Contributing
 
 Contributions are welcome! Please submit a pull request or open an issue to discuss the changes you would like to make.
