@@ -40,7 +40,7 @@ The `generateuser.py` script can be easily modified to generate different types 
 
 ## Extra
 
-If you want also to proceed a bulk deletion of the users by providing a CSV file with the Azure specifications, run the deleteuser.py script following the same process as the generateuser.py
+If you want also to proceed a bulk deletion of the users by providing a CSV file with the Azure specifications, run the `deleteuser.py` script following the same process as the `generateuser.py`
 
 ## Contributing
 
