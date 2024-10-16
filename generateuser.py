@@ -11,8 +11,9 @@ users = []
 
 # List of departments, cities, states & jobs
 departments = ["RH", "IT", "Compliance", "Audit", "Finance", "Marketing", "Ventes", "Support Client"]
-cities = ["Douala", "Yaoundé", "Bafoussam", "Kribi", "Garoua"]
+cities = ["Douala", "Yaoundé", "Bafoussam", "Kribi", "Garoua", "Abidjan", "Libreville", "Malabo", "Dakar", "Limbe"]
 states = ["Littoral", "Centre", "Ouest", "Sud", "Nord"]
+countries = ["Cameroon", "Guinea", "Ivory Coast", "Senegal", "Gabon"]
 job_titles = {
     "RH": ["Responsable RH", "Assistant RH", "Recruteur"],
     "IT": ["Développeur", "Administrateur Système", "Analyste Sécurité"],
@@ -33,7 +34,8 @@ for _ in range(number_of_users):
     first_name = fake.first_name()
     last_name = fake.last_name()
     display_name = f"{first_name} {last_name}"
-    user_principal_name = f"{first_name.lower()}.{last_name.lower()}@mail.com"
+    user_principal_name = f"{first_name.lower()}.{last_name.lower()}@likabo-ind.me"
+    country = random.choice(countries)
     
     user = {
         "Nom [displayName] Obligatoire": display_name,
@@ -47,7 +49,7 @@ for _ in range(number_of_users):
         "Lieu d'utilisation [usageLocation]": fake.country_code(),
         "Rue [streetAddress]": fake.street_address(),
         "Département ou région [state]": state,
-        "Pays ou région [country]": fake.country(),
+        "Pays ou région [country]": country,
         "Office [physicalDeliveryOfficeName]": fake.company(),
         "Ville [city]": city,
         "Code postal [postalCode]": fake.postcode(),
@@ -57,7 +59,7 @@ for _ in range(number_of_users):
     users.append(user)
 
 # Save the users in a csv file
-with open('users.csv', 'w', newline='') as csvfile:
+with open('users.csv', 'w', newline='', encoding='utf-8') as csvfile:
     writer = csv.writer(csvfile)
     
     # first line of the csv file following Azure template
